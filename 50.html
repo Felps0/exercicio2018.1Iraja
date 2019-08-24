@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<div id="saida"> </div>
+
+<body>
+        
+        <label>Digite um nome </label>    
+        <input type="text" name="nome" id="nome" onchange="ler">
+
+        <label> Sexo </label>    
+        <input type="text" name="sexo" id="sexo" onchange="ler">
+
+        <button onclick="ler()">Ok</button>
+        <div id="saida"></div>
+        
+
+</body>
+</html>
+<script>
+        function ler(){
+            var nome = document.getElementById("nome").value;
+            var nome = document.getElementById("sexo").value;
+            if (nome == "M" ){
+                document.getElementById("saida").innerHTML = "llmo Sr." + nome;
+
+            }   else {
+                document.getElementById("saida").innerHTML = "llma Sra." + nome;
+            }
+            
+            
+
+        }
+
+</script>
